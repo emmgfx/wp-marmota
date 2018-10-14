@@ -1,2 +1,12 @@
 @import '_colors';
 @import '_wp-headers';
+
+$theme-colors: (
+  "primary": #15dfb1,
+);
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+body{
+    font-family: 'Rubik', sans-serif;
+}

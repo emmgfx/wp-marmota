@@ -12,6 +12,7 @@
   "author": "we are Marmota",
   "license": "ISC",
   "devDependencies": {
+    "bootstrap": "^4.1.3",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^6.0.0",
     "gulp-clean": "^0.4.0",
