@@ -3,9 +3,14 @@ var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
 var clean = require('gulp-clean');
 var zip = require('gulp-zip');
+var autoprefixer = require('gulp-autoprefixer');
 
 gulp.task('styles', function() {
     gulp.src('sass/**/*.scss')
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
         .pipe(sourcemaps.init())
         .pipe(sass({
             outputStyle: 'compressed'
