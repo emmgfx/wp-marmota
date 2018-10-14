@@ -37,3 +37,5 @@
             
         </di>
     </nav>
+    
+    <div class="bg-rectangle bg-rectangle-1"></div>

@@ -10,6 +10,19 @@ body{
     }
 }
 
+.bg-rectangle{
+    border-radius: 8px;
+    &.bg-rectangle-1{
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 50%;
+        height: 362px;
+        background-color: #f3f3f3;
+        border-radius: 0 0 0 8px;
+    }
+}
+
 .navbar{
     padding: 1.8rem 1rem;
     
