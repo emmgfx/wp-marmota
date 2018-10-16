@@ -4,17 +4,29 @@ var sourcemaps = require('gulp-sourcemaps');
 var clean = require('gulp-clean');
 var zip = require('gulp-zip');
 var autoprefixer = require('gulp-autoprefixer');
+var notify = require("gulp-notify");
 
 gulp.task('styles', function() {
     gulp.src('sass/**/*.scss')
-        .pipe(sass({
-            outputStyle: 'compressed'
-        }).on('error', sass.logError))
+        .pipe(
+            sass({
+                outputStyle: 'compressed'
+            }).on('error', sass.logError)
+        )
+        .on('error', notify.onError(function (error) {
+            return {
+                message: error.messageOriginal,
+                title: "Error on SASS"
+            };
+        }))
         .pipe(autoprefixer({
             browsers: ['last 2 versions'],
             cascade: false
         }))
-        .pipe(gulp.dest('./'));
+        .pipe(gulp.dest('./'))
+        .pipe(notify({
+            title: "SASS compiled",
+        }));
 });
 
 gulp.task('default', function() {
