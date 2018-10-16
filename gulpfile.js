@@ -16,17 +16,14 @@ gulp.task('styles', function() {
         .on('error', notify.onError(function (error) {
             return {
                 message: error.messageOriginal,
-                title: "Error on SASS"
+                title: error.relativePath
             };
         }))
         .pipe(autoprefixer({
             browsers: ['last 2 versions'],
             cascade: false
         }))
-        .pipe(gulp.dest('./'))
-        .pipe(notify({
-            title: "SASS compiled",
-        }));
+        .pipe(gulp.dest('./'));
 });
 
 gulp.task('default', function() {
