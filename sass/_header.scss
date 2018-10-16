@@ -1,0 +1,56 @@
+.navbar{
+    padding: 1.8rem 1rem;
+    
+    .navbar-toggler{
+        width: 48px;
+        height: 48px;
+        border-radius: 24px;
+        box-shadow: 0 8px 15px 0 rgba(0, 0, 0, 0.15);
+        background-color: map-get($theme-colors, 'primary');
+        padding: 0;
+        transition: all .3s;
+        
+        &:focus{
+            outline: none;
+        }
+        
+        &:hover{
+            box-shadow: 0 0px 2px 0 rgba(0, 0, 0, 0.15);
+            transform: translateY(8px);
+        }
+        
+        svg{
+            width:24px;
+            height:24px
+        }
+    }
+    .navbar-brand{
+        font-weight: bold;
+        font-size: 30px;
+        color: map-get($theme-colors, 'primary');
+    }
+    .navbar-collapse{
+        font-size: 16px;
+        
+        ul{
+            li{
+                a:hover{
+                    color: map-get($theme-colors, 'primary');
+                }
+                
+                @include media-breakpoint-up('md'){
+                    a{
+                        margin: 0 25px;
+                    }
+                    &:last-child() a{
+                        margin-right: 0;
+                    }
+                    &:first-child() a{
+                        margin-left: 0;
+                    }
+                }
+
+            }
+        }
+    }
+}
