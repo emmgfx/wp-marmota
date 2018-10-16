@@ -1,10 +1,19 @@
 @import '_colors';
 @import '_wp-headers';
 @import "../node_modules/bootstrap/scss/bootstrap";
+@import "_footer";
 
 body{
     font-family: 'Rubik', sans-serif;
     
+    // Sticky footer
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    > main#content{
+        flex: 1;
+    }
+
     a{
         color: inherit;
     }
@@ -12,12 +21,14 @@ body{
 
 .bg-rectangle{
     border-radius: 8px;
+    z-index: -1;
     &.bg-rectangle-1{
         position: absolute;
         top: 0;
         left: 50%;
         width: 50%;
         height: 362px;
+        max-height: 100vh;
         background-color: #f3f3f3;
         border-radius: 0 0 0 8px;
     }

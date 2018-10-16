@@ -11,6 +11,7 @@
 </head>
 <body>
 
+    <header>
     <nav class="navbar navbar-expand-md sticky-top">
         <div class="container">
             
@@ -37,5 +38,8 @@
             
         </di>
     </nav>
+    </header>
     
     <div class="bg-rectangle bg-rectangle-1"></div>
+
+    <main id="content">
