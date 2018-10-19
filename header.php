@@ -6,7 +6,6 @@
     <meta name="description" content="<?php bloginfo('description'); ?>">
     <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" type="text/css" media="all" />
     <link href="https://fonts.googleapis.com/css?family=Rubik:300,300i,400,500" rel="stylesheet">
-    <title>Hello, world!</title>
     <?php wp_head(); ?>
 </head>
 <body>
