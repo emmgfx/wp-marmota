@@ -4,7 +4,7 @@ require_once 'class-wp-bootstrap-navwalker.php';
 
 function custom_nav_menus() {
 	$locations = array(
-		'primary' => __( 'Primary menu', 'marmota' ),
+		'primary' => __( 'Principal', 'marmota' ),
 		'footer' => __( 'Pié de página ', 'marmota' ),
 	);
 	register_nav_menus( $locations );
