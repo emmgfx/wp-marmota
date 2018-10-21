@@ -18,7 +18,7 @@ article{
         background-repeat: no-repeat;
         border-radius: 8px;
         box-shadow: 0 6px 15px 0 rgba(0, 0, 0, 0.15);
-        background-color: white;
+        background-color: map-get($theme-colors, 'primary');
 
         a.featured-image-badge{
             position: absolute;

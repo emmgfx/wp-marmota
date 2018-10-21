@@ -1,6 +1,6 @@
 <article class="list-item vertical my-4">
 
-    <a href="<?php the_permalink(); ?>" class="embed-responsive embed-responsive-16by9 featured-image mb-4" style="background-image: url(https://placeimg.com/800/450/nature);">
+    <a href="<?php the_permalink(); ?>" class="embed-responsive embed-responsive-16by9 featured-image mb-4" style="background-image: url(<?php echo get_the_post_thumbnail_url(null, 'post-thumbnail'); ?>);">
         <?php
         $categories = get_the_category(); 
         if( isset($categories[0]) ): $category = $categories[0];
