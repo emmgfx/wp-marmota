@@ -1,12 +1,12 @@
-@import '_colors';
+@import "_colors";
 @import "_mixins";
-@import '_wp-headers';
-@import '_wp-core';
+@import "_wp-headers";
+@import "_wp-core";
 @import "../node_modules/bootstrap/scss/bootstrap";
 @import "_header";
 @import "_articles";
+@import "_pagination";
 @import "_footer";
-@import '_pagination';
 
 body{
     font-family: 'Rubik', sans-serif;
