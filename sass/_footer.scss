@@ -7,4 +7,24 @@ footer{
         font-size: 30px;
         color: #c1bfbf;
     }
+    
+    #menu-footer ul{
+        list-style: none;
+        font-size: 0;
+        color: #a2a2a2;
+        
+        li{
+            display: inline;
+            
+            &:not(:last-child):after{
+                content: "|";
+                margin: 0 .5rem;
+                font-size: 16px;
+            }
+            
+            a{
+                font-size: 16px;
+            }
+        }
+    }
 }

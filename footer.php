@@ -14,9 +14,17 @@
                         <?php endforeach; ?>
                     </ul>
                 </div>
+                <?php if(has_nav_menu('footer')): ?>
                 <div class="col-4 text-right">
-                    Legal links
+                    <?php
+                    wp_nav_menu(array(
+                        'theme_location'	=> 'footer',
+                        'depth'				=> 0, // 1 = with dropdowns, 0 = no dropdowns.
+                        'container_id'  	=> 'menu-footer',
+                    ));
+                    ?>
                 </div>
+                <?php endif; ?>
             </div>
         </div>
     </footer>
