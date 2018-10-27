@@ -22,6 +22,17 @@
                 <?php the_content(); ?>
             </main>
 
+            <div class="row next-and-prev-links">
+                <div class="col-12 col-sm-6 d-flex mb-2 mb-sm-0">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/left.svg" class="mr-2" />
+                    <span class="text-truncate"><?php previous_post_link('%link'); ?></span>
+                </div>
+                <div class="col-12 col-sm-6 d-flex justify-content-end">
+                    <span class="text-truncate"><?php next_post_link('%link'); ?></span>
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/right.svg" class="ml-2" />
+                </div>
+            </div>
+            
         </article>
         
     </div>
