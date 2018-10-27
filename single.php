@@ -6,6 +6,8 @@
         
     <?php get_template_part('article', 'detail'); ?>
 
+    <?php comments_template(); ?>
+
     <?php endwhile; endif; ?>
     
 </div>

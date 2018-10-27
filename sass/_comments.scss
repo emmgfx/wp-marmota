@@ -1,0 +1,129 @@
+div#comments{
+    
+    h2{
+        position: relative;
+        font-size: 24px;
+        font-weight: 500;
+        color: map-get($theme-colors, 'primary');
+        text-transform: uppercase;
+        margin-bottom: 60px;
+        
+        &:after{
+            position: absolute;
+            content: "";
+            width: 60px;
+            height: 5px;
+            border-radius: 1px;
+            background-color: map-get($theme-colors, 'primary');
+            bottom: -10px;
+            left: 0;
+        }
+    }
+    
+    .pingback{
+        margin: 60px 0;
+        border: 1px solid transparentize(map-get($theme-colors, 'primary'), 0.8);
+        background: transparentize(map-get($theme-colors, 'primary'), 0.9);
+        padding: 15px;
+        border-radius: 3px;
+
+        .reply a{
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+            text-transform: uppercase;
+            color: map-get($theme-colors, 'primary');
+            
+            img{
+                vertical-align: -5%;
+                margin-left: .4rem;
+                transition: all .2s;
+            }
+            
+            &:hover img{
+                margin-left: .7rem;
+            }
+        }
+    }
+
+    .comment{
+        margin: 60px 0;
+        
+        
+        .comment{
+            padding-left: 80px;
+        }
+        
+        .comment-meta{
+
+            img.avatar{
+                float: left;
+                border-radius: 999px;
+                margin-right: 20px;
+            }
+
+
+            .comment-author{
+                font-size: 18px;
+                font-weight: 500;
+                margin-bottom: .5rem;
+            }
+
+
+            span.says{
+                display: none;
+            }
+
+
+            div.comment-metadata{
+                font-size: 12px;
+                line-height: 1.83;
+                letter-spacing: 0.2px;
+                margin-bottom: 1rem;
+            }
+        }
+        
+        .comment-content{
+            padding-left: 80px;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 1.57;
+            letter-spacing: 0.3px;
+
+            pre{
+                background-color: red;
+                color: red;
+                border: none;
+                border-radius: 0;
+                padding: 20px;
+                font-size: 15px;
+                overflow: auto;
+                -ms-word-wrap: normal;
+                word-wrap: normal;
+                overflow-wrap: normal;
+                white-space: pre;
+            }
+        }
+        
+        .reply a{
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+            text-transform: uppercase;
+            margin-left: 80px;
+            color: map-get($theme-colors, 'primary');
+
+            img{
+                vertical-align: -5%;
+                margin-left: .4rem;
+                transition: all .2s;
+            }
+            
+            &:hover img{
+                margin-left: .7rem;
+            }
+        }
+
+    }
+    
+}
