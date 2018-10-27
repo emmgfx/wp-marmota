@@ -23,14 +23,24 @@
             </main>
 
             <div class="row next-and-prev-links">
-                <div class="col-12 col-sm-6 d-flex mb-2 mb-sm-0">
+                <?php
+                $previous_link = get_previous_post_link('%link');
+                $next_link = get_next_post_link('%link');
+                ?>
+                
+                <?php if( $previous_link ): ?>
+                <div class="col-12 d-flex <?php if($next_link): ?>col-sm-6 mb-2 mb-sm-0<?php endif; ?>">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/left.svg" class="mr-2" />
-                    <span class="text-truncate"><?php previous_post_link('%link'); ?></span>
+                    <span class="text-truncate"><?php echo $previous_link; ?></span>
                 </div>
-                <div class="col-12 col-sm-6 d-flex justify-content-end">
-                    <span class="text-truncate"><?php next_post_link('%link'); ?></span>
+                <?php endif; ?>
+                
+                <?php if( $next_link ): ?>
+                <div class="col-12 d-flex justify-content-end <?php if( $previous_link ): ?>col-sm-6<?php endif; ?>">
+                    <span class="text-truncate"><?php echo $next_link; ?></span>
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/right.svg" class="ml-2" />
                 </div>
+                <?php endif; ?>
             </div>
             
         </article>
