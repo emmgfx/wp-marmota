@@ -96,7 +96,30 @@ article{
         }
     }
 
+    .share-links{
+        margin-top: 45px;
+        margin-bottom: 45px;
+        font-size: 12px;
+        line-height: 1.83;
+        letter-spacing: 0.2px;
+        
+        span{
+            margin-top: 3px;
+            margin-right: 10px;
+        }
+        
+        a{
+            margin-right: 10px;
+        }
+        
+        a, img{
+            display: inline-block;
+        }
+    }
+    
     .next-and-prev-links{
+        margin-top: 45px;
+        margin-bottom: 45px;
         font-size: 18px;
         font-weight: 500;
         align-items: center;

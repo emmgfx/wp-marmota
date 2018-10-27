@@ -21,6 +21,13 @@
             <main>
                 <?php the_content(); ?>
             </main>
+            
+            <div class="share-links text-right d-flex justify-content-end align-items-center">
+                <span><?php echo __('Compartir', 'marmota'); ?></span>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/social/facebook.svg" /></a>
+                <a href="https://www.linkedin.com/shareArticle?mini=true&url=<?php the_permalink(); ?>&title=<?php the_title(); ?>&summary=&source=" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/social/linkedin.svg" /></a>
+                <a href="https://twitter.com/home?status=<?php the_permalink(); ?>" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/social/twitter.svg" /></a>
+            </div>
 
             <div class="row next-and-prev-links">
                 <?php
