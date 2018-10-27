@@ -74,9 +74,9 @@ function is_first_page(){
 }
 
 function modify_default_query( $query ) {
-
-	if( $query->is_main_query() ):
-                
+    
+    if( $query->is_main_query() ):
+        
         $posts_per_page = get_option('posts_per_page');
         
         if( $query->get('paged') == 0 ):
@@ -85,8 +85,8 @@ function modify_default_query( $query ) {
             $first_post_of_this_page = $posts_per_page * $query->get('paged') - $posts_per_page;
             $query->set('offset', $first_post_of_this_page + 1 );
         endif;
-		
-	endif;
-
+    
+    endif;
 }
+
 add_action( 'pre_get_posts', 'modify_default_query' );
