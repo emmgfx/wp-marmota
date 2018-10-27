@@ -61,7 +61,7 @@ function customize_register( $wp_customize ) {
             'priority' => 10, // Within the section.
             'section' => 'social', // Required, core or custom.
             'label' => $label,
-            'description' => __( 'URL del perfil de ' . $label, 'marmota' ),
+            'description' => sprintf(__( 'URL del perfil de %s.', 'marmota' ), $label ),
         ) );
     }
 
