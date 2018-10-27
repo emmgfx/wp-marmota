@@ -76,6 +76,11 @@ article{
 
     main{
         
+        img{
+            @extend .img-fluid;
+            @extend .rounded;
+        }
+        
         pre{
             border-radius: 8px;
             background-color: #f3f3f3;
