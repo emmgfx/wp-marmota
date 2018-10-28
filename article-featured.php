@@ -1,4 +1,4 @@
-<article class="list-item featured my-4">
+<article id="post-<?php the_ID(); ?>" <?php post_class(array('list-item', 'featured', 'my-4')); ?>>
     <div class="row align-items-center">
         <div class="col-md-7 order-md-2 mb-3 mb-md-0">
             <a href="<?php the_permalink(); ?>" class="embed-responsive embed-responsive-16by9 featured-image" style="background-image: url(<?php echo get_the_post_thumbnail_url(null, 'post-thumbnail'); ?>);">
