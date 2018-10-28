@@ -5,6 +5,8 @@ require_once 'includes/menus.php';
 add_theme_support( "post-thumbnails" );
 add_theme_support( 'automatic-feed-links' );
 
+if ( ! isset( $content_width ) ) $content_width = 960;
+
 add_action('after_setup_theme', 'theme_slug_setup');
 function theme_slug_setup() {
     add_theme_support('title-tag');
