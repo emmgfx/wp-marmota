@@ -52,11 +52,8 @@ function customize_register( $wp_customize ) {
         $wp_customize->add_setting( $slug, array(
             'type' => 'theme_mod', // or 'option'
             'capability' => 'edit_theme_options',
-            'theme_supports' => '', // Rarely needed.
-            'default' => '', // Ej: #000000
             'transport' => 'refresh', // or postMessage
-            'sanitize_callback' => '', // Ej: 'sanitize_hex_color'
-            'sanitize_js_callback' => '', // Basically to_json.
+            'sanitize_callback' => 'esc_url_raw', // Ej: 'sanitize_hex_color'
         ) );
         
         $wp_customize->add_control( $slug, array(
