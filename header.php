@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Rubik:300,300i,400,500" rel="stylesheet">
     <?php wp_head(); ?>
 </head>
-<body>
+<body <?php body_class(); ?>>
 
     <header>
     <nav class="navbar navbar-expand-md sticky-top">
