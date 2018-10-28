@@ -43,3 +43,10 @@ nav.navigation.pagination{
         }
     }
 }
+
+// Comments pagination:
+
+nav.comments-navigation{
+    @extend nav.navigation.pagination;
+    text-align: center;
+}
