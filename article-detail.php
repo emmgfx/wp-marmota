@@ -3,8 +3,8 @@
         <article id="post-<?php the_ID(); ?>" <?php post_class(array('detail', 'my-4')); ?>>
 
             <h1 class="text-center"><?php the_title(); ?></h1>
-
-            <?php if(has_post_thumbnail()): ?>
+            
+            <?php if( has_post_thumbnail() && get_post_format() != 'image' ): ?>
             <a href="<?php the_permalink(); ?>" class="embed-responsive embed-responsive-16by9 featured-image mb-4" style="background-image: url(<?php echo get_the_post_thumbnail_url(null, 'post-thumbnail'); ?>">
                 <?php
                 $categories = get_the_category(); 

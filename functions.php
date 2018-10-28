@@ -4,6 +4,7 @@ require_once 'includes/menus.php';
 
 add_theme_support( "post-thumbnails" );
 add_theme_support( 'automatic-feed-links' );
+add_theme_support( 'post-formats', array( 'image' ) );
 
 if ( ! isset( $content_width ) ) $content_width = 960;
 

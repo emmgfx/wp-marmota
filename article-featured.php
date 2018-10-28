@@ -18,7 +18,14 @@
             
             <?php the_excerpt(); ?>
             
-            <a href="<?php the_permalink(); ?>" class="read-more"><?php echo __('Leer más', 'marmota'); ?> <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/arrow.svg" /></a>
+            <a href="<?php the_permalink(); ?>" class="read-more">
+                <?php if( get_post_format() == 'image' ): ?>
+                <?php echo __('Ver foto', 'marmota'); ?>
+                <?php else: ?>
+                <?php echo __('Leer más', 'marmota'); ?>
+                <?php endif; ?>
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/arrow.svg" />
+            </a>
         </div>
     </div>
 </article>
