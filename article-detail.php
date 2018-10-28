@@ -22,6 +22,8 @@
                 <?php the_content(); ?>
             </main>
             
+            <?php if( is_single() ): ?>
+                
             <div class="share-links text-right d-flex justify-content-end align-items-center">
                 <span><?php echo __('Compartir', 'marmota'); ?></span>
                 <a href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/social/facebook.svg" /></a>
@@ -49,6 +51,8 @@
                 </div>
                 <?php endif; ?>
             </div>
+            
+            <?php endif; ?>
             
         </article>
         
