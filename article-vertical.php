@@ -1,4 +1,4 @@
-<article id="post-<?php the_ID(); ?>" <?php post_class(array('list-item', 'vertical', 'my-4')); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(array('list-item', 'vertical')); ?>>
 
     <a href="<?php the_permalink(); ?>" class="embed-responsive embed-responsive-16by9 featured-image mb-4" style="background-image: url(<?php echo get_the_post_thumbnail_url(null, 'post-thumbnail'); ?>);">
         <?php

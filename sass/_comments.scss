@@ -6,12 +6,12 @@ div#comments{
         font-weight: 500;
         color: map-get($theme-colors, 'primary');
         text-transform: uppercase;
-        margin-bottom: 60px;
+        margin-bottom: map-get($theme-sizes, 'comments-vertical-space');
         
         &:after{
             position: absolute;
             content: "";
-            width: 60px;
+            width: map-get($theme-sizes, 'comments-vertical-space');
             height: 5px;
             border-radius: 1px;
             background-color: map-get($theme-colors, 'primary');
@@ -21,7 +21,7 @@ div#comments{
     }
     
     .pingback{
-        margin: 60px 0;
+        margin: map-get($theme-sizes, 'comments-vertical-space') 0;
         border: 1px solid transparentize(map-get($theme-colors, 'primary'), 0.8);
         background: transparentize(map-get($theme-colors, 'primary'), 0.9);
         padding: 15px;
@@ -47,11 +47,10 @@ div#comments{
     }
 
     .comment{
-        margin: 60px 0;
-        
+        margin: map-get($theme-sizes, 'comments-vertical-space') 0;
         
         .comment{
-            padding-left: 80px;
+            padding-left: map-get($theme-sizes, 'comments-avatar') + 20;
         }
         
         .comment-meta{
@@ -60,6 +59,8 @@ div#comments{
                 float: left;
                 border-radius: 999px;
                 margin-right: 20px;
+                width: map-get($theme-sizes, 'comments-avatar');
+                height: map-get($theme-sizes, 'comments-avatar');
             }
 
 
@@ -80,11 +81,12 @@ div#comments{
                 line-height: 1.83;
                 letter-spacing: 0.2px;
                 margin-bottom: 1rem;
+                padding-left: map-get($theme-sizes, 'comments-avatar') + 20;
             }
         }
         
         .comment-content{
-            padding-left: 80px;
+            padding-left: map-get($theme-sizes, 'comments-avatar') + 20;
             font-size: 14px;
             font-weight: 300;
             line-height: 1.57;
@@ -109,7 +111,7 @@ div#comments{
             font-weight: 500;
             letter-spacing: 0.3px;
             text-transform: uppercase;
-            margin-left: 80px;
+            margin-left: map-get($theme-sizes, 'comments-avatar') + 20;
             color: map-get($theme-colors, 'primary');
 
             img{

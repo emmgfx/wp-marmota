@@ -1,14 +1,15 @@
 article{
+    margin-bottom: map-get($theme-sizes, 'general-vertical-space');
     
     h1{
         font-size: 28px;
         font-weight: 500;
-        margin-bottom: 1.5rem;
+        margin-bottom: map-get($theme-sizes, 'general-vertical-space') / 2;
     }
     h2{
         font-size: 24px;
         font-weight: 500;
-        margin-bottom: 1rem;
+        margin-bottom: map-get($theme-sizes, 'general-vertical-space') / 2;
     }
     
     a.featured-image,   // Use a in lists
@@ -53,7 +54,7 @@ article{
     }
 
     ul.context{
-        margin-bottom: 1rem;
+        margin-bottom: map-get($theme-sizes, 'general-vertical-space') / 2;
         
         img{
             width: 16px;
@@ -106,8 +107,8 @@ article{
     }
 
     .share-links{
-        margin-top: 45px;
-        margin-bottom: 45px;
+        margin-top: map-get($theme-sizes, 'general-vertical-space');
+        margin-bottom: map-get($theme-sizes, 'general-vertical-space');
         font-size: 12px;
         line-height: 1.83;
         letter-spacing: 0.2px;
@@ -127,8 +128,8 @@ article{
     }
     
     .next-and-prev-links{
-        margin-top: 45px;
-        margin-bottom: 45px;
+        margin-top: map-get($theme-sizes, 'general-vertical-space');
+        margin-bottom: map-get($theme-sizes, 'general-vertical-space');
         font-size: 18px;
         font-weight: 500;
         align-items: center;

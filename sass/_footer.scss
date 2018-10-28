@@ -1,5 +1,5 @@
 body > footer{
-    padding: 50px 0;
+    padding: map-get($theme-sizes, 'general-vertical-space') 0;
     background-color: #f3f3f3;
     
     a.footer-brand{

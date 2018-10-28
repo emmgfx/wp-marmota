@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-12 col-lg-8 offset-0 offset-lg-2">
-        <article id="post-<?php the_ID(); ?>" <?php post_class(array('detail', 'my-4')); ?>>
+        <article id="post-<?php the_ID(); ?>" <?php post_class(array('detail')); ?>>
 
             <h1 class="text-center"><?php the_title(); ?></h1>
             

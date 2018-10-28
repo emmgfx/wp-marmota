@@ -3,7 +3,7 @@ nav.navigation.pagination{
     font-weight: bold;
     line-height: 1.35;
     color: #b8c1cb;
-    margin: 50px 0 80px 0;
+    margin-bottom: map-get($theme-sizes, 'general-vertical-space');
     
     > div.nav-links{
         display: block;
@@ -57,7 +57,7 @@ nav.post-navigation{
     font-weight: bold;
     line-height: 1.35;
     color: #b8c1cb;
-    margin: 45px 0;
+    margin: map-get($theme-sizes, 'general-vertical-space') 0;
     text-align: center;
     text-transform: uppercase;
 }
