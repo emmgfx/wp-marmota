@@ -23,7 +23,7 @@
 				    </div>
 			    </div>
 			<?php else : ?>
-			    <p><?php echo __('Sé el primero', 'marmota'); ?></p>
+			    <p><?php echo __('No hay comentarios. Sé el primero en comentar.', 'marmota'); ?></p>
 			<?php endif; ?>
             
             <?php comment_form(); ?>
