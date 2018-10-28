@@ -22,6 +22,15 @@
                 <?php the_content(); ?>
             </main>
             
+            <?php
+            wp_link_pages(array(
+                'before'           => '<nav class="post-navigation">',
+                'after'            => '</nav>',
+                'next_or_number'   => 'next',
+                'separator'        => ' &middot; ',
+            ));
+            ?>
+            
             <?php if( is_single() ): ?>
                 
             <div class="share-links text-right d-flex justify-content-end align-items-center">

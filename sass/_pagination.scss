@@ -50,3 +50,14 @@ nav.comments-navigation{
     @extend nav.navigation.pagination;
     text-align: center;
 }
+
+
+nav.post-navigation{
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.35;
+    color: #b8c1cb;
+    margin: 45px 0;
+    text-align: center;
+    text-transform: uppercase;
+}
