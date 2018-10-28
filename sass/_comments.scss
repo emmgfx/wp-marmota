@@ -91,17 +91,16 @@ div#comments{
             letter-spacing: 0.3px;
 
             pre{
-                background-color: red;
-                color: red;
-                border: none;
-                border-radius: 0;
+                border-radius: 8px;
+                background-color: #f3f3f3;
                 padding: 20px;
-                font-size: 15px;
-                overflow: auto;
-                -ms-word-wrap: normal;
-                word-wrap: normal;
-                overflow-wrap: normal;
-                white-space: pre;
+                font-size: 12px;
+                font-weight: 300;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: 1.57;
+                letter-spacing: 0.3px;
+                margin: 30px 0;
             }
         }
         
