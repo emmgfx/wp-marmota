@@ -2,8 +2,10 @@
     <div class="col-12 col-lg-8 offset-0 offset-lg-2">
 		
 		<div id="comments">
+            
 			<h2><?php printf(__( "Comentarios (%d)", "marmota" ), get_comments_number()); ?></h2>
-			<?php if($comments) : ?>
+			
+            <?php if($comments) : ?>
 				<div class="comments">
 			        <?php
 					wp_list_comments(array(
@@ -23,7 +25,9 @@
 			<?php else : ?>
 			    <p><?php echo __('Sé el primero', 'marmota'); ?></p>
 			<?php endif; ?>
+            
+            <?php comment_form(); ?>
+            
 		</div>
-		
 	</div>
 </div>
