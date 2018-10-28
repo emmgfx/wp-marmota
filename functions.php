@@ -92,3 +92,10 @@ function modify_default_query( $query ) {
 }
 
 add_action( 'pre_get_posts', 'modify_default_query' );
+
+function enqueue_comment_reply() {
+    if ( get_option( 'thread_comments' ) ) {
+        wp_enqueue_script( 'comment-reply' );
+    }
+}
+add_action( 'comment_form_before', 'enqueue_comment_reply' );
