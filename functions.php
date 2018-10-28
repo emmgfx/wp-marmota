@@ -3,6 +3,7 @@
 require_once 'includes/menus.php';
 
 add_theme_support( "post-thumbnails" );
+add_theme_support( 'automatic-feed-links' );
 
 add_action('after_setup_theme', 'theme_slug_setup');
 function theme_slug_setup() {
