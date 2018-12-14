@@ -96,9 +96,21 @@ section.desktop-search{
         }
     }
     
-    button{
+    button.close-search{
         position: absolute;
         top: 10px;
         right: 10px;
+        color: white;
+        font-size: 12px;
+        box-shadow: none;
+        text-shadow: none;
+        font-weight: normal;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        
+        svg{
+            vertical-align: -45%;
+        }
     }
 }

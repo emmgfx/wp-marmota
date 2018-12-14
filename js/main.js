@@ -3,7 +3,7 @@ jQuery(function($){
     var searchOverlay = $('header section.desktop-search');
     var searchInput = $('header section.desktop-search input');
     var btSearchToggler = $('header button.search-toggler');
-    var btSearchClose = $('header section.desktop-search button.close');
+    var btSearchClose = $('header section.desktop-search button.close-search');
     
     btSearchToggler.on('click', function(){
         searchOverlay.toggleClass('visible');
