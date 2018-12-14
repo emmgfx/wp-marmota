@@ -1,7 +1,8 @@
 .navbar{
     padding: 1.8rem 1rem;
     
-    .navbar-toggler{
+    .navbar-toggler,
+    .search-toggler{
         width: 48px;
         height: 48px;
         border-radius: 24px;
@@ -9,19 +10,17 @@
         background-color: map-get($theme-colors, 'primary');
         padding: 0;
         transition: all .3s;
-        
+        border: none;
+        margin-left: 100px;
+        cursor: pointer;
+    
         &:focus{
             outline: none;
         }
         
-        &:hover{
-            box-shadow: 0 0px 2px 0 rgba(0, 0, 0, 0.15);
-            transform: translateY(8px);
-        }
-        
         svg{
             width:24px;
-            height:24px
+            height:24px;
         }
     }
     .navbar-brand{
@@ -52,5 +51,54 @@
 
             }
         }
+
+        .pseudo-container{
+            width: 100%;
+            @include media-breakpoint-up(md) {
+                @include make-container();
+                @include make-container-max-widths($max-widths: $container-max-widths, $breakpoints: $grid-breakpoints)
+            }
+        }
+        
+    }
+}
+
+section.desktop-search{
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    z-index: 9999;
+    transition: all .4s cubic-bezier(0, 0.8, 0, 1);
+    
+    &.visible{
+        top: 0;
+        background-color: map-get($theme-colors, 'primary');
+    }
+    
+    input[type=search]{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 75%;
+        font-size: 24px;
+        transform: translate(-50%, -50%);
+        background-color: transparent;
+        border: none;
+        border-bottom: 3px solid rgba(255, 255, 255, .7);
+        color: white;
+        @include placeholder-color(rgba(255, 255, 255, .7));
+        
+        &:focus{
+            outline: none;
+        }
+    }
+    
+    button{
+        position: absolute;
+        top: 10px;
+        right: 10px;
     }
 }
