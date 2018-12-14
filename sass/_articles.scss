@@ -12,14 +12,23 @@ article{
         margin-bottom: map-get($theme-sizes, 'general-vertical-space') / 2;
     }
     
-    a.featured-image,   // Use a in lists
-    div.featured-image{ // Use div in single
-        background-position: center center;
-        background-size: cover;
-        background-repeat: no-repeat;
+    div.featured-image-wrapper{
         border-radius: 8px;
-        box-shadow: 0 6px 15px 0 rgba(0, 0, 0, 0.15);
-        background-color: map-get($theme-colors, 'primary');
+        margin-bottom: 25px;
+
+        a.featured-image,   // Use a in lists
+        div.featured-image{ // Use div in single
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            box-shadow: 0 6px 15px 0 rgba(0, 0, 0, 0.15);
+            background-color: map-get($theme-colors, 'primary');
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
 
         a.featured-image-badge{
             position: absolute;
@@ -28,14 +37,12 @@ article{
             z-index: 1;
             border-radius: 12px;
             background-color: #d6fff6;
-
             font-size: 10px;
             font-weight: 500;
             line-height: 2.2;
             letter-spacing: 0.2px;
             color: #08c096;
             text-transform: uppercase;
-            
             padding: 1px 13px 0 13px;
             transition: all .2s;
             
@@ -45,6 +52,7 @@ article{
                 box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.3);
                 text-decoration: none;
             }
+            
             &:hover:active{
                 box-shadow: none;
                 transform: translateY(3px);
@@ -140,36 +148,14 @@ article{
 article.featured,
 article.vertical{
     
-    a.featured-image{
-        box-shadow:
-            // 0 0 0 0 transparent,
-            // 0 0 0 0 transparent,
-            0 6px 15px 0 rgba(0, 0, 0, 0.15);
+    div.featured-image-wrapper{
+        box-shadow: 0 6px 15px 0 rgba(0, 0, 0, 0.15);
         transition: all .3s;
         
         &:hover{
             transform: translateY(-.5rem);
-            box-shadow:
-                // 0 0 0 0 transparent,
-                // 0 0 0 0 transparent,
-                0 1rem 1.5rem 0 rgba(0, 0, 0, 0.1);
+            box-shadow: 0 1rem 1.5rem 0 rgba(0, 0, 0, 0.1);
         }
-        
-        // &:focus{
-        //     outline: none;
-        //     box-shadow:
-        //         0 0 0 2px rgba(255, 255, 255, 1),
-        //         0 0 0 5px map-get($theme-colors, 'primary'),
-        //         0 6px 15px 0 rgba(0, 0, 0, 0.15);
-        // }
-        // 
-        // &:hover:focus{
-        //     outline: none;
-        //     box-shadow:
-        //         0 0 0 2px rgba(255, 255, 255, 1),
-        //         0 0 0 5px map-get($theme-colors, 'primary'),
-        //         0 1rem 1.5rem 0 rgba(0, 0, 0, 0.1);
-        // }
     }
     
     h2 a{
