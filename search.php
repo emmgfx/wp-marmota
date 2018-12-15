@@ -1,0 +1,32 @@
+<?php get_header(); ?>
+
+<div class="container">
+    
+
+    <?php if( have_posts() ): ?>
+        <h1><?php echo __('Resultados de búsqueda', 'marmota'); ?> (<?php echo get_search_query() ?>)</h1>
+        <?php
+        get_template_part('article_list');
+        the_posts_pagination(array(
+            'prev_text' => '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+                <path fill="#C1BFBF" d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z" />
+            </svg>',
+            'next_text' => '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+                <path fill="#C1BFBF" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
+            </svg>',
+            'mid_size' => 2
+        ));
+        ?>
+    <?php else: ?>
+        <h1 class="text-center"><?php echo __('No se ha encontrado nada...', 'marmota'); ?></h1>
+        <p class="text-center">
+            <svg style="width:48px;height:48px" viewBox="0 0 24 24">
+                <path fill="#000000" d="M16.5,12C19,12 21,14 21,16.5C21,17.38 20.75,18.21 20.31,18.9L23.39,22L22,23.39L18.88,20.32C18.19,20.75 17.37,21 16.5,21C14,21 12,19 12,16.5C12,14 14,12 16.5,12M16.5,14A2.5,2.5 0 0,0 14,16.5A2.5,2.5 0 0,0 16.5,19A2.5,2.5 0 0,0 19,16.5A2.5,2.5 0 0,0 16.5,14M19,8H3V18H10.17C10.34,18.72 10.63,19.39 11,20H3C1.89,20 1,19.1 1,18V6C1,4.89 1.89,4 3,4H9L11,6H19A2,2 0 0,1 21,8V11.81C20.42,11.26 19.75,10.81 19,10.5V8Z" />
+            </svg>
+        </p>
+    <?php endif; ?>
+    
+    
+</div>
+
+<?php get_footer(); ?>

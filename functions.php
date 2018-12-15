@@ -14,7 +14,7 @@ function marmota_is_first_page(){
 
 function modify_default_query( $query ) {
     
-    if( $query->is_main_query() ):
+    if( $query->is_home() ):
         
         $posts_per_page = get_option('posts_per_page');
         

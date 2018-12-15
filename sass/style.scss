@@ -28,6 +28,31 @@ body{
             color: inherit;
         }
     }
+    
+    // Used only in the theme titles, not in the articles.
+    div.container > h1{
+        position: relative;
+        font-size: 24px;
+        font-weight: 500;
+        color: map-get($theme-colors, 'primary');;
+        margin-bottom: 40px;
+        text-transform: uppercase;
+        
+        &:after{
+            content: "";
+            position: absolute;
+            background-color: map-get($theme-colors, 'primary');
+            width: 60px;
+            height: 5px;
+            bottom: -10px;
+            left: 0;
+        }
+        
+        &.text-center:after{
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
 }
 
 .bg-rectangle{
