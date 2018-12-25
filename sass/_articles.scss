@@ -85,6 +85,18 @@ article{
 
     main{
         
+        h2{
+            font-size: 24px;
+        }
+        
+        h3{
+            font-size: 20px;
+        }
+        
+        h4{
+            font-size: 18px;
+        }
+        
         img{
             @extend .img-fluid;
             @extend .rounded;
@@ -102,6 +114,17 @@ article{
             letter-spacing: 0.3px;
             color: #4a4a4a;
             margin: 30px 0;
+        }
+        
+        blockquote{
+            border-radius: 8px;
+            background-color: #f3f3f3;
+            padding: 20px;
+
+            cite{
+                text-align: right;
+                display: block;
+            }
         }
         
         input[type=text],
