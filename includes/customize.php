@@ -12,3 +12,4 @@ function add_marmota_panel( $wp_customize ) {
 add_action( 'customize_register', 'add_marmota_panel' );
 
 require_once 'customize-social.php';
+require_once 'customize-interface.php';
