@@ -1,7 +1,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(array('list-item', 'vertical')); ?>>
 
     <div class="featured-image-wrapper embed-responsive embed-responsive-16by9">
-        <a href="<?php the_permalink(); ?>" class="featured-image" style="background-image: url(<?php echo get_the_post_thumbnail_url(null, 'post-thumbnail'); ?>);"></a>
+        <a href="<?php the_permalink(); ?>" class="featured-image"><?php the_post_thumbnail( 'list-thumb', array('class' => 'img-fluid') ); ?></a>
         <?php
         $categories = get_the_category(); 
         if( isset($categories[0]) ): $category = $categories[0];

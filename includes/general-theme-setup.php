@@ -3,6 +3,8 @@
 add_theme_support( "post-thumbnails" );
 add_theme_support( 'automatic-feed-links' );
 add_theme_support( 'post-formats', array( 'image' ) );
+add_image_size( 'featured-thumb', 730, 410, true );
+add_image_size( 'list-thumb', 350, 197, true );
 
 if ( ! isset( $content_width ) ) $content_width = 960;
 

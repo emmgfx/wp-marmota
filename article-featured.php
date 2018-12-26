@@ -2,7 +2,7 @@
     <div class="row align-items-center">
         <div class="col-md-7 order-md-2 mb-3 mb-md-0">
             <div class="featured-image-wrapper embed-responsive embed-responsive-16by9">
-                <a href="<?php the_permalink(); ?>" class="featured-image" style="background-image: url(<?php echo get_the_post_thumbnail_url(null, 'post-thumbnail'); ?>);"></a>
+                <a href="<?php the_permalink(); ?>" class="featured-image"><?php the_post_thumbnail( 'featured-thumb', array('class' => 'img-fluid') ); ?></a>
                 <?php
                 $categories = get_the_category(); 
                 if( isset($categories[0]) ): $category = $categories[0];
