@@ -3,7 +3,7 @@
 require_once 'includes/menus.php';
 require_once 'includes/customize.php';
 require_once 'includes/general-theme-setup.php';
-
+require_once 'includes/sidebars.php';
 
 function marmota_current_page(){
     return get_query_var('paged') ?: 1;

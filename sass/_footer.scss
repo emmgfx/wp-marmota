@@ -1,3 +1,7 @@
+aside#above_footer-sidebar{
+    margin-bottom: map-get($theme-sizes, 'general-vertical-space');
+}
+
 body > footer{
     padding: map-get($theme-sizes, 'general-vertical-space') 0;
     background-color: #f3f3f3;
