@@ -35,7 +35,7 @@ gulp.task('clean', function () {
         .pipe(clean());
 });
 
-gulp.task('build', ['clean'], function () {
+gulp.task('build', ['styles', 'clean'], function () {
     return gulp.src([
         '**/*',
         '!build/**/*',
