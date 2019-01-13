@@ -13,6 +13,7 @@ function add_interface_section( $wp_customize ) {
         'type' => 'theme_mod', // or 'option'
         'capability' => 'edit_theme_options',
         'transport' => 'refresh', // or postMessage
+        'sanitize_callback' => 'esc_attr',
     ) );
 
     $wp_customize->add_control( 'navbar-expand', array(
