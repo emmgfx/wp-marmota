@@ -19,10 +19,10 @@ function add_interface_section( $wp_customize ) {
         'type' => 'select',
         'priority' => 10, // Within the section.
         'section' => 'interface', // Required, core or custom.
-        'label' => __( 'Expandir menú principal', 'marmota' ),
+        'label' => __( 'Expandir men&uacute; principal', 'marmota' ),
         'description' => sprintf(__( 'A partir del ancho...', 'marmota' ), $label ),
         'choices' => array(
-            'sm' => __( 'Pequeño', 'marmota' ),
+            'sm' => __( 'Peque&ntilde;o', 'marmota' ),
             'md' => __( 'Mediano', 'marmota' ),
             'lg' => __( 'Grande', 'marmota' ),
             'xl' => __( 'Muy grande', 'marmota' ),

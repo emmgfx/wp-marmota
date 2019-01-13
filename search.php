@@ -4,7 +4,7 @@
     
 
     <?php if( have_posts() ): ?>
-        <h1><?php echo __('Resultados de búsqueda', 'marmota'); ?> (<?php echo get_search_query() ?>)</h1>
+        <h1><?php echo __('Resultados de b&uacute;squeda', 'marmota'); ?> (<?php echo get_search_query() ?>)</h1>
         <?php
         get_template_part('article_list');
         get_template_part('pagination', 'posts');

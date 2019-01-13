@@ -20,7 +20,7 @@
         <?php if( get_post_format() == 'image' ): ?>
         <?php echo __('Ver foto', 'marmota'); ?>
         <?php else: ?>
-        <?php echo __('Leer más', 'marmota'); ?>
+        <?php echo __('Leer m&aacute;s', 'marmota'); ?>
         <?php endif; ?>
         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/arrow.svg" />
     </a>

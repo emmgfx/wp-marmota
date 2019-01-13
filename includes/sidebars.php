@@ -4,8 +4,8 @@ function marmota_sidebars() {
 	$args = array(
 		'id'            => 'above_footer',
 		'class'         => 'row',
-		'name'          => __( 'Sobre el pie de página', 'marmota' ),
-		'description'   => __( 'Widgets sobre el pie de página', 'marmota' ),
+		'name'          => __( 'Sobre el pie de p&aacute;gina', 'marmota' ),
+		'description'   => __( 'Widgets sobre el pie de p&aacute;gina', 'marmota' ),
 		'before_widget' => '<div class="col">',
 		'after_widget'  => '</div>',
 	);
