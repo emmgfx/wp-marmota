@@ -47,6 +47,6 @@ gulp.task('build', ['clean'], function () {
         '!node_modules/**/*',
         '!node_modules',
     ])
-    .pipe(zip('mrmt.zip'))
+    .pipe(zip('marmota.zip'))
     .pipe(gulp.dest('build'));
 });
