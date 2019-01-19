@@ -13,6 +13,10 @@ function theme_slug_setup() {
     add_theme_support('title-tag');
 }
 
+# Enqueue styles and fonts
+wp_enqueue_style( 'style', get_stylesheet_uri() );
+wp_enqueue_style( 'Rubik', 'https://fonts.googleapis.com/css?family=Rubik:300,300i,400,500' );
+
 # Enqueue jquery and bootstrap for the navigation
 wp_enqueue_script('jquery');
 wp_enqueue_script('bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '4.2.1', true);
