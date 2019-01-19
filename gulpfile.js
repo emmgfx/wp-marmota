@@ -42,8 +42,6 @@ gulp.task('build', ['styles', 'clean'], function () {
         '!gulpfile.js',
         '!package-lock.json',
         '!package.json',
-        '!sass/**/*',
-        '!sass',
         '!node_modules/**/*',
         '!node_modules',
     ])
