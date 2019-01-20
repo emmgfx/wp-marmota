@@ -1,5 +1,5 @@
 <?php
-function add_marmota_panel( $wp_customize ) {
+function marmota_customize_panel( $wp_customize ) {
     
     $wp_customize->add_panel( 'marmota', array(
         'priority' => 160,
@@ -9,7 +9,7 @@ function add_marmota_panel( $wp_customize ) {
     ) );
     
 }
-add_action( 'customize_register', 'add_marmota_panel' );
+add_action( 'customize_register', 'marmota_customize_panel' );
 
 require_once 'customize-social.php';
 require_once 'customize-interface.php';

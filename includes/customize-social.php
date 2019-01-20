@@ -16,7 +16,7 @@ function marmota_get_social_networks(){
     );
 }
 
-function add_social_section( $wp_customize ) {
+function marmota_add_social_section( $wp_customize ) {
 
     $wp_customize->add_section( 'social', array(
         'title' => __( 'Redes sociales', 'marmota' ),
@@ -44,4 +44,4 @@ function add_social_section( $wp_customize ) {
     }
 
 }
-add_action( 'customize_register', 'add_social_section' );
+add_action( 'customize_register', 'marmota_add_social_section' );

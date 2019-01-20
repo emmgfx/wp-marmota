@@ -1,6 +1,6 @@
 <?php
 
-function add_interface_section( $wp_customize ) {
+function marmota_add_interface_section( $wp_customize ) {
 
     $wp_customize->add_section( 'interface', array(
         'title' => __( 'Interfaz', 'marmota' ),
@@ -31,4 +31,4 @@ function add_interface_section( $wp_customize ) {
     ) );
 
 }
-add_action( 'customize_register', 'add_interface_section' );
+add_action( 'customize_register', 'marmota_add_interface_section' );

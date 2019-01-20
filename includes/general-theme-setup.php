@@ -22,9 +22,9 @@ wp_enqueue_script('jquery');
 wp_enqueue_script('bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '4.2.1', true);
 wp_enqueue_script( 'marmota', get_template_directory_uri() . '/js/main.js', array('jquery', 'bootstrap'), true );
 
-function enqueue_comment_reply() {
+function marmota_enqueue_comment_reply() {
     if ( get_option( 'thread_comments' ) ) {
         wp_enqueue_script( 'comment-reply' );
     }
 }
-add_action( 'comment_form_before', 'enqueue_comment_reply' );
+add_action( 'comment_form_before', 'marmota_enqueue_comment_reply' );
