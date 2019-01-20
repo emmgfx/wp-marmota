@@ -9,7 +9,7 @@
 <body <?php body_class(); ?>>
 
     <header>
-        <nav class="navbar navbar-expand-<?php echo get_theme_mod("navbar-expand", "md"); ?> sticky-top">
+        <nav class="navbar navbar-expand-<?php echo esc_attr(get_theme_mod("navbar-expand", "md")); ?> sticky-top">
             <div class="container">
                 
                 <a class="navbar-brand" href="<?php echo get_home_url(); ?>"><?php echo get_bloginfo('name'); ?></a>
@@ -33,12 +33,12 @@
                         'walker'			=> new WP_Bootstrap_Navwalker()
                     ));
                     ?>
-                    <button class="search-toggler d-none d-<?php echo get_theme_mod("navbar-expand", "md"); ?>-block">
+                    <button class="search-toggler d-none d-<?php echo esc_attr(get_theme_mod("navbar-expand", "md")); ?>-block">
                         <svg viewBox="0 0 24 24">
                             <path fill="#FFFFFF" d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" />
                         </svg>
                     </button>
-                    <form class="search form-inline my-3 my-<?php echo get_theme_mod("navbar-expand", "md"); ?>-0 d-<?php echo get_theme_mod("navbar-expand", "md"); ?>-none" role="search" method="get" action="<?php echo home_url( '/' ); ?>">
+                    <form class="search form-inline my-3 my-<?php echo esc_attr(get_theme_mod("navbar-expand", "md")); ?>-0 d-<?php echo get_theme_mod("navbar-expand", "md"); ?>-none" role="search" method="get" action="<?php echo home_url( '/' ); ?>">
                         <div class="d-flex w-100">
                             <input class="form-control mr-2 flex-grow-1" type="search" placeholder="<?php echo __("Buscar", "marmota"); ?>" value="<?php echo get_search_query() ?>" name="s" aria-label="<?php echo __("Buscar", "marmota"); ?>">
                             <button class="btn btn-primary btn-sm" type="submit"><?php echo __("Buscar", "marmota"); ?></button>
