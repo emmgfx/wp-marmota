@@ -22,7 +22,7 @@ function marmota_add_interface_section( $wp_customize ) {
         'priority' => 10, // Within the section.
         'section' => 'interface', // Required, core or custom.
         'label' => __( 'Expandir men&uacute; principal', 'marmota' ),
-        'description' => sprintf(__( 'A partir del ancho...', 'marmota' ), $label ),
+        'description' => __( 'A partir del ancho...', 'marmota' ),
         'choices' => array(
             'sm' => __( 'Peque&ntilde;o', 'marmota' ),
             'md' => __( 'Mediano', 'marmota' ),
