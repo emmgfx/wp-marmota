@@ -11,9 +11,10 @@ function marmota_add_interface_section( $wp_customize ) {
     
     $wp_customize->add_setting( 'navbar-expand', array(
         'type' => 'theme_mod', // or 'option'
+        'default' => 'md',
         'capability' => 'edit_theme_options',
         'transport' => 'refresh', // or postMessage
-        'sanitize_callback' => 'esc_attr',
+        'sanitize_callback' => 'marmota_validate_navbar_expand',
     ) );
 
     $wp_customize->add_control( 'navbar-expand', array(
@@ -31,4 +32,11 @@ function marmota_add_interface_section( $wp_customize ) {
     ) );
 
 }
+
+function marmota_validate_navbar_expand( $navbar_expand ) {
+    if ( in_array( $navbar_expand, array( 'sm', 'md', 'lg', 'xl' ), true ) ) {
+        return $navbar_expand;
+    }
+}
+
 add_action( 'customize_register', 'marmota_add_interface_section' );
