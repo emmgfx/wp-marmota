@@ -1,19 +1,19 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
-var clean = require('gulp-clean');
+var del = require('del');
 var zip = require('gulp-zip');
 var autoprefixer = require('gulp-autoprefixer');
 var notify = require("gulp-notify");
 
-gulp.task('styles', function() {
-    gulp.src('sass/**/*.scss')
+gulp.task('styles', (done) => {
+    return gulp.src('sass/**/*.scss')
         .pipe(
             sass({
                 outputStyle: 'compressed'
             }).on('error', sass.logError)
         )
-        .on('error', notify.onError(function (error) {
+        .on('error', notify.onError((error) => {
             return {
                 message: error.messageOriginal,
                 title: error.relativePath
@@ -26,16 +26,15 @@ gulp.task('styles', function() {
         .pipe(gulp.dest('./'));
 });
 
-gulp.task('default', function() {
-    gulp.watch('sass/**/*.scss', ['styles']);
+gulp.task('default', () => {
+    gulp.watch('sass/**/*.scss', gulp.parallel('styles'));
 });
 
-gulp.task('clean', function () {
-    return gulp.src('build', {read: false})
-        .pipe(clean());
+gulp.task('clean', (done) => {
+    del(['build'], done());
 });
 
-gulp.task('build', ['styles', 'clean'], function () {
+gulp.task('pack', (done) => {
     return gulp.src([
         '**/*',
         '!build/**/*',
@@ -48,3 +47,5 @@ gulp.task('build', ['styles', 'clean'], function () {
     .pipe(zip('marmota.zip'))
     .pipe(gulp.dest('build'));
 });
+
+gulp.task('build', gulp.series('clean', 'styles', 'pack'));
