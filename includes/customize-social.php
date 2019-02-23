@@ -2,17 +2,17 @@
 
 function marmota_get_social_networks(){
     return array(
-        'social_dribbble' => __('Dribbble', 'marmota'),
-        'social_facebook' => __('Facebook', 'marmota'),
-        'social_instagram' => __('Instagram', 'marmota'),
-        'social_linkedin' => __('Linked In', 'marmota'),
-        'social_pinterest' => __('Pinterest', 'marmota'),
-        'social_telegram' => __('Telegram', 'marmota'),
-        'social_tumblr' => __('Telegram', 'marmota'),
-        'social_tumblr' => __('Tumblr', 'marmota'),
-        'social_twitch' => __('Twitch', 'marmota'),
-        'social_twitter' => __('Twitter', 'marmota'),
-        'social_youtube' => __('Youtube', 'marmota'),
+        'marmota_social_dribbble' => __('Dribbble', 'marmota'),
+        'marmota_social_facebook' => __('Facebook', 'marmota'),
+        'marmota_social_instagram' => __('Instagram', 'marmota'),
+        'marmota_social_linkedin' => __('Linked In', 'marmota'),
+        'marmota_social_pinterest' => __('Pinterest', 'marmota'),
+        'marmota_social_telegram' => __('Telegram', 'marmota'),
+        'marmota_social_tumblr' => __('Telegram', 'marmota'),
+        'marmota_social_tumblr' => __('Tumblr', 'marmota'),
+        'marmota_social_twitch' => __('Twitch', 'marmota'),
+        'marmota_social_twitter' => __('Twitter', 'marmota'),
+        'marmota_social_youtube' => __('Youtube', 'marmota'),
     );
 }
 

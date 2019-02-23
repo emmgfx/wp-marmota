@@ -8,8 +8,8 @@ add_image_size( 'marmota_list-thumb', 350, 197, true );
 
 if ( ! isset( $content_width ) ) $content_width = 960;
 
-add_action('after_setup_theme', 'theme_slug_setup');
-function theme_slug_setup() {
+add_action('after_setup_theme', 'marmota_slug_setup');
+function marmota_slug_setup() {
     add_theme_support('title-tag');
 }
 
