@@ -35,9 +35,9 @@
                 
             <div class="share-links text-right d-flex justify-content-end align-items-center">
                 <span><?php echo __('Compartir', 'marmota'); ?></span>
-                <a href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/social/facebook.svg" /></a>
-                <a href="https://www.linkedin.com/shareArticle?mini=true&url=<?php the_permalink(); ?>&title=<?php the_title(); ?>&summary=&source=" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/social/linkedin.svg" /></a>
-                <a href="https://twitter.com/home?status=<?php the_permalink(); ?>" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/social/twitter.svg" /></a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>" target="_blank"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/social/facebook.svg" /></a>
+                <a href="https://www.linkedin.com/shareArticle?mini=true&url=<?php the_permalink(); ?>&title=<?php the_title(); ?>&summary=&source=" target="_blank"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/social/linkedin.svg" /></a>
+                <a href="https://twitter.com/home?status=<?php the_permalink(); ?>" target="_blank"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/social/twitter.svg" /></a>
             </div>
 
             <div class="row next-and-prev-links">
@@ -48,7 +48,7 @@
                 
                 <?php if( $previous_link ): ?>
                 <div class="col-12 d-flex <?php if($next_link): ?>col-sm-6 mb-2 mb-sm-0<?php endif; ?>">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/left.svg" class="mr-2" />
+                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/icons/left.svg" class="mr-2" />
                     <span class="text-truncate"><?php echo $previous_link; ?></span>
                 </div>
                 <?php endif; ?>
@@ -56,7 +56,7 @@
                 <?php if( $next_link ): ?>
                 <div class="col-12 d-flex justify-content-end <?php if( $previous_link ): ?>col-sm-6<?php endif; ?>">
                     <span class="text-truncate"><?php echo $next_link; ?></span>
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/right.svg" class="ml-2" />
+                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/icons/right.svg" class="ml-2" />
                 </div>
                 <?php endif; ?>
             </div>

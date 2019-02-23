@@ -22,7 +22,7 @@
         <?php else: ?>
         <?php echo __('Leer m&aacute;s', 'marmota'); ?>
         <?php endif; ?>
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/arrow.svg" />
+        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/icons/arrow.svg" />
     </a>
 
 </article>

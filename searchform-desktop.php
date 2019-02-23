@@ -1,5 +1,5 @@
 <section class="desktop-search">
-    <form role="search" method="get" action="<?php echo home_url( '/' ); ?>">
+    <form role="search" method="get" action="<?php echo esc_url(home_url( '/' )); ?>">
         <input type="search" placeholder="<?php echo __("Buscar", "marmota"); ?>" value="<?php echo get_search_query() ?>" name="s" aria-label="<?php echo __("Buscar", "marmota"); ?>">
         <button class="close-search" type="button">
             ESC

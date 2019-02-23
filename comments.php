@@ -11,7 +11,7 @@
 					wp_list_comments(array(
 						'style' => 'div',
 						'type' => 'all',
-						'reply_text' => __('Responder', 'marmota') . '<img src="' . get_template_directory_uri() . '/assets/img/icons/arrow.svg" />',
+						'reply_text' => __('Responder', 'marmota') . '<img src="' . esc_url(get_template_directory_uri()) . '/assets/img/icons/arrow.svg" />',
 						'avatar_size' => 60,
 						'format' => 'html5',
 					));
