@@ -11,9 +11,12 @@
         padding: 0;
         transition: all .3s;
         border: none;
-        margin-left: 100px;
         cursor: pointer;
     
+        @include media-breakpoint-up('sm') {
+            margin-left: 100px;
+        }
+        
         &:focus{
             outline: none;
         }
@@ -27,6 +30,13 @@
         font-weight: bold;
         font-size: 30px;
         color: map-get($theme-colors, 'primary');
+        max-width: calc(100% - 64px);
+        
+        img{
+            width: 100%;
+            max-width: 250px;
+            max-height: 42px;
+        }
     }
     .navbar-collapse{
         font-size: 16px;
