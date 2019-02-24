@@ -12,7 +12,21 @@
         <nav class="navbar navbar-expand-<?php echo esc_attr(get_theme_mod("navbar-expand", "md")); ?> sticky-top">
             <div class="container">
                 
-                <a class="navbar-brand" href="<?php echo esc_url(get_home_url()); ?>"><?php echo get_bloginfo('name'); ?></a>
+                <a class="navbar-brand" href="<?php echo esc_url(get_home_url()); ?>">
+                    <?php 
+                    if(function_exists('the_custom_logo')){
+                        if(has_custom_logo()){
+                            $custom_logo_id = get_theme_mod( 'custom_logo' );
+                            $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+                            echo '<img src="'. esc_url( $logo[0] ) .'" alt="'. esc_attr(get_bloginfo('name')) .'">';
+                        }else{
+                            echo get_bloginfo('name');
+                        }
+                    }else{
+                        echo get_bloginfo('name');
+                    }
+                    ?>
+                </a>
                 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navbarNav" aria-expanded="false" aria-label="<?php echo __("Alternar navegación", "marmota"); ?>">
                     <svg viewBox="0 0 24 24">
