@@ -1,4 +1,16 @@
 <?php
+
+function marmota_custom_logo_setup() {
+    $defaults = array(
+        'height'      => 42,
+        'width'       => 200,
+        'flex-height' => false,
+        'flex-width'  => true,
+    );
+    add_theme_support( 'custom-logo', $defaults );
+}
+add_action( 'after_setup_theme', 'marmota_custom_logo_setup' );
+
 function marmota_customize_panel( $wp_customize ) {
     
     $wp_customize->add_panel( 'marmota', array(
