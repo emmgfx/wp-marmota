@@ -10,7 +10,7 @@
         <?php endif; ?>
     </div>
 
-    <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+    <h2 class="article-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
     
     <?php get_template_part('context', 'list'); ?>
     

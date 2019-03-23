@@ -1,12 +1,12 @@
 article{
     margin-bottom: map-get($theme-sizes, 'general-vertical-space');
     
-    h1{
+    h1.article-title{
         font-size: 28px;
         font-weight: 500;
         margin-bottom: map-get($theme-sizes, 'general-vertical-space') / 2;
     }
-    h2{
+    h2.article-title{
         font-size: 24px;
         font-weight: 500;
         margin-bottom: map-get($theme-sizes, 'general-vertical-space') / 2;

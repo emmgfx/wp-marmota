@@ -2,7 +2,7 @@
     <div class="col-12 col-lg-8 offset-0 offset-lg-2">
         <article id="post-<?php the_ID(); ?>" <?php post_class(array('detail')); ?>>
 
-            <h1 class="text-center"><?php the_title(); ?></h1>
+            <h1 class="article-title text-center"><?php the_title(); ?></h1>
             
             <?php if( has_post_thumbnail() && get_post_format() != 'image' ): ?>
             <div class="featured-image-wrapper embed-responsive embed-responsive-16by9">
