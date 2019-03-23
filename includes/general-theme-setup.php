@@ -7,7 +7,7 @@ add_theme_support( 'custom-logo' );
 add_image_size( 'marmota_featured-thumb', 730, 410, true );
 add_image_size( 'marmota_list-thumb', 350, 197, true );
 
-if ( ! isset( $content_width ) ) $content_width = 960;
+if ( ! isset( $content_width ) ) $content_width = 1140;
 
 function marmota_slug_setup() {
     add_theme_support('title-tag');
