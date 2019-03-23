@@ -1,11 +1,11 @@
     </main> <!-- main#content -->
     
     <?php if ( is_active_sidebar( 'above_footer' ) ) : ?>
-	<aside id="above_footer-sidebar" class="container" role="complementary">
+    <aside id="above_footer-sidebar" class="container" role="complementary">
         <div class="row">
             <?php dynamic_sidebar( 'above_footer' ); ?>
         </div>
-	</aside>
+    </aside>
     <?php endif; ?>
 
     <footer>

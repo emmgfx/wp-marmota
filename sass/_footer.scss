@@ -1,5 +1,37 @@
 aside#above_footer-sidebar{
     margin-bottom: map-get($theme-sizes, 'general-vertical-space');
+    
+    h2{
+        position: relative;
+        font-size: 20px;
+        font-weight: 500;
+        color: map-get($theme-colors, 'primary');
+        text-transform: uppercase;
+        margin-bottom: map-get($theme-sizes, 'comments-vertical-space') / 2;
+        
+        &:after{
+            position: absolute;
+            content: "";
+            width: map-get($theme-sizes, 'comments-vertical-space');
+            height: 5px;
+            border-radius: 1px;
+            background-color: map-get($theme-colors, 'primary');
+            bottom: -10px;
+            left: 0;
+        }
+    }
+
+    ul{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        line-height: 1.4;
+        
+        li{
+            transition: all .3s;
+            margin-bottom: .4rem;
+        }
+    }
 }
 
 body > footer{
