@@ -9,25 +9,23 @@ add_image_size( 'marmota_list-thumb', 350, 197, true );
 
 if ( ! isset( $content_width ) ) $content_width = 960;
 
-add_action('after_setup_theme', 'marmota_slug_setup');
 function marmota_slug_setup() {
     add_theme_support('title-tag');
 }
+add_action('after_setup_theme', 'marmota_slug_setup');
 
-function marmota_scripts_and_styles(){
-    # Enqueue styles and fonts
-    wp_enqueue_style( 'style', get_stylesheet_uri() );
-    wp_enqueue_style( 'Rubik', 'https://fonts.googleapis.com/css?family=Rubik:300,300i,400,500' );
-
-    # Enqueue jquery and bootstrap for the navigation
-    wp_enqueue_script( 'jquery' );
-    wp_enqueue_script( 'bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js', array('jquery'), '4.3.1', true );
-    wp_enqueue_script( 'marmota', esc_url(get_template_directory_uri()) . '/js/main.js', array('jquery', 'bootstrap'), true );
+function marmota_enqueue_style() {
+  wp_enqueue_style( 'style', get_stylesheet_uri() );
+  wp_enqueue_style( 'Rubik', 'https://fonts.googleapis.com/css?family=Rubik:300,300i,400,500' );
 }
+add_action( 'wp_enqueue_scripts', 'marmota_enqueue_style' );
 
-if( !is_admin() ){
-    marmota_scripts_and_styles();
+function marmota_enqueue_script() {
+  wp_enqueue_script( 'jquery' );
+  wp_enqueue_script( 'bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js', array('jquery'), '4.3.1', true );
+  wp_enqueue_script( 'marmota', esc_url(get_template_directory_uri()) . '/js/main.js', array('jquery', 'bootstrap'), true );
 }
+add_action( 'wp_enqueue_scripts', 'marmota_enqueue_script' );
 
 function marmota_enqueue_comment_reply() {
     if ( get_option( 'thread_comments' ) ) {
