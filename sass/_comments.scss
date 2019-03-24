@@ -1,5 +1,6 @@
 div#comments{
-    
+    margin-bottom: map-get($theme-sizes, 'general-vertical-space');
+
     > h2{
         position: relative;
         font-size: 24px;

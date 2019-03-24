@@ -32,6 +32,10 @@ aside#above_footer-sidebar{
             margin-bottom: .4rem;
         }
     }
+    
+    input, select, textarea{
+        @extend .form-control;
+    }
 }
 
 body > footer{
