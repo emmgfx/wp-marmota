@@ -132,8 +132,33 @@ article{
         input[type=email]
         input[type=url],
         input[type=phone],
+        input[type=password],
         textarea{
             @extend .form-control;
+        }
+        input[type=submit],
+        input[type=button],
+        button{
+            @extend .btn;
+            @extend .btn-primary;
+        }
+        
+        .post-password-form{
+            background-color: #f3f3f3;
+            padding: 25px;
+            border-radius: 5px;
+            
+            p:last-child{
+                margin-bottom: 0;
+            }
+            
+            input[type=password]{
+                @extend .form-control-sm;
+            }
+            input[type=submit]{
+                @extend .btn-sm;
+                @extend .btn-dark;
+            }
         }
     }
 
