@@ -16,9 +16,9 @@
                 </div>
                 <div class="col-4 text-center">
                     <ul class="list-unstyled list-inline m-0">
-                        <?php foreach( marmota_get_social_networks() as $slug => $label ): ?>
-                        <?php $url = esc_url(get_theme_mod($slug)); if(empty($url)) continue; ?>
-                        <li class="list-inline-item"><a href="<?php echo $url; ?>" target="_blank"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/social/<?php echo str_replace('social_', '', $slug); ?>.svg" /></a></li>
+                        <?php foreach( marmota_get_social_networks() as $marmota_slug => $marmota_label ): ?>
+                        <?php $marmota_url = esc_url(get_theme_mod($marmota_slug)); if(empty($marmota_url)) continue; ?>
+                        <li class="list-inline-item"><a href="<?php echo $marmota_url; ?>" target="_blank"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/social/<?php echo str_replace('social_', '', $marmota_slug); ?>.svg" /></a></li>
                         <?php endforeach; ?>
                     </ul>
                 </div>

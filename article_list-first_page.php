@@ -1,7 +1,7 @@
 <div class="row">
-<?php if ( have_posts() ) : $counter = 0; while ( have_posts() ) : the_post(); ?>
+<?php if ( have_posts() ) : $marmota_counter = 0; while ( have_posts() ) : the_post(); ?>
     
-    <?php if( $counter == 0 ): ?>
+    <?php if( $marmota_counter == 0 ): ?>
     <div class="col-12">
         <?php get_template_part('article', 'featured'); ?>
     </div>
@@ -11,7 +11,7 @@
     </div>
     <?php endif; ?>
     
-    <?php $counter++; ?>
+    <?php $marmota_counter++; ?>
     
 <?php endwhile; endif; ?>
 </div>
