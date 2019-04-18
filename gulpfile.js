@@ -41,6 +41,7 @@ gulp.task('pack', (done) => {
         '!gulpfile.js',
         '!package-lock.json',
         '!package.json',
+        '!README.md',
         '!node_modules/**/*',
         '!node_modules',
     ])
