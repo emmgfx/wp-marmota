@@ -6,7 +6,7 @@
             
             <?php if( has_post_thumbnail() && get_post_format() != 'image' ): ?>
             <div class="featured-image-wrapper embed-responsive embed-responsive-16by9">
-                <a href="<?php the_permalink(); ?>" class="featured-image"><?php the_post_thumbnail( 'marmota_featured-thumb', array('class' => 'img-fluid') ); ?></a>
+                <a href="<?php the_permalink(); ?>" class="featured-image"><?php the_post_thumbnail( 'marmota_featured-thumb' ); ?></a>
                 <?php
                 $marmota_categories = get_the_category(); 
                 if( isset($marmota_categories[0]) ): $marmota_category = $marmota_categories[0];
