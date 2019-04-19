@@ -1,6 +1,6 @@
 <section class="desktop-search">
     <form role="search" method="get" action="<?php echo esc_url(home_url( '/' )); ?>">
-        <input type="search" placeholder="<?php echo __("Buscar", "marmota"); ?>" value="<?php echo get_search_query() ?>" name="s" aria-label="<?php echo __("Buscar", "marmota"); ?>">
+        <input type="search" placeholder="<?php echo esc_attr(__("Buscar", "marmota")); ?>" value="<?php echo get_search_query() ?>" name="s" aria-label="<?php echo esc_attr(__("Buscar", "marmota")); ?>">
         <button class="close-search" type="button">
             <?php echo __("ESC", "marmota"); ?>
             <svg style="width:24px;height:24px" viewBox="0 0 24 24">
