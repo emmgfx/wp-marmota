@@ -1,18 +1,18 @@
 <?php
 
-add_theme_support( "post-thumbnails" );
-add_theme_support( 'automatic-feed-links' );
-add_theme_support( 'post-formats', array( 'image' ) );
-add_theme_support( 'custom-logo' );
 add_image_size( 'marmota_featured-thumb', 730, 410, true );
 add_image_size( 'marmota_list-thumb', 550, 310, true );
 
 if ( ! isset( $content_width ) ) $content_width = 1140;
 
-function marmota_slug_setup() {
+function marmota_supports_setup() {
     add_theme_support('title-tag');
+    add_theme_support( "post-thumbnails" );
+    add_theme_support( 'automatic-feed-links' );
+    add_theme_support( 'post-formats', array( 'image' ) );
+    add_theme_support( 'custom-logo' );
 }
-add_action('after_setup_theme', 'marmota_slug_setup');
+add_action('after_setup_theme', 'marmota_supports_setup');
 
 function marmota_enqueue_style() {
   wp_enqueue_style( 'style', get_stylesheet_uri() );
