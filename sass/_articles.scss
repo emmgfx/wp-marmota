@@ -110,7 +110,7 @@ article{
         pre{
             border-radius: 8px;
             background-color: #f3f3f3;
-            padding: 20px;
+            padding: 20px 20px 20px 50px;
             font-size: 14px;
             font-weight: 300;
             font-style: normal;
@@ -119,6 +119,23 @@ article{
             letter-spacing: 0.3px;
             color: #4a4a4a;
             margin: 30px 0;
+            position: relative;
+            
+            &:before{
+              $content: '';
+              @for $i from 1 through 99 {
+                  $content: $content + $i + '\A ';
+              }
+
+              content: $content;
+              position: absolute;
+              overflow: hidden;
+              top: 0px;
+              left: 0px;
+              bottom: 0;
+              margin: 21px;
+              color: transparentize(#4a4a4a, .8);
+            }
         }
         
         blockquote{
@@ -130,6 +147,10 @@ article{
                 text-align: right;
                 display: block;
             }
+        }
+        
+        strong, b{
+            font-weight: 500;
         }
         
         input[type=text],
