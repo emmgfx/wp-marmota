@@ -13,6 +13,7 @@ function marmota_get_social_networks(){
         'marmota_social_twitch' => __('Twitch', 'marmota'),
         'marmota_social_twitter' => __('Twitter', 'marmota'),
         'marmota_social_youtube' => __('Youtube', 'marmota'),
+        'marmota_social_behance' => __('Behance', 'marmota'),
     );
 }
 
