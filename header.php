@@ -37,14 +37,14 @@
                 <div id="navigation" class="collapse navbar-collapse">
                     <?php
                     wp_nav_menu(array(
-                        'theme_location'	=> 'primary',
-                        'depth'				=> 2, // 1 = with dropdowns, 0 = no dropdowns.
-                        'container'			=> '',
-                        'container_class'	=> '',
-                        'container_id'		=> 'navigation',
-                        'menu_class'		=> 'navbar-nav ml-auto',
-                        'fallback_cb'		=> 'WP_Bootstrap_Navwalker::fallback',
-                        'walker'			=> new WP_Bootstrap_Navwalker()
+                        'theme_location'  => 'primary',
+                        'depth'           => 2, # 1 = with dropdowns, 0 = no dropdowns.
+                        'container'       => '',
+                        'container_class' => '',
+                        'container_id'    => 'navigation',
+                        'menu_class'      => 'navbar-nav ml-auto',
+                        'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
+                        'walker'          => new WP_Bootstrap_Navwalker()
                     ));
                     ?>
                     <button class="search-toggler d-none d-<?php echo esc_attr(get_theme_mod("navbar-expand", "md")); ?>-block">
