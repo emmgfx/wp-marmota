@@ -54,8 +54,8 @@
                 <?php endif; ?>
                 
                 <?php if( $marmota_next_link ): ?>
-                <div class="col-12 d-flex justify-content-end <?php if( $previous_link ): ?>col-sm-6<?php endif; ?>">
-                    <span class="text-truncate"><?php echo $next_link; ?></span>
+                <div class="col-12 d-flex justify-content-end <?php if( $marmota_previous_link ): ?>col-sm-6<?php endif; ?>">
+                    <span class="text-truncate"><?php echo $marmota_next_link; ?></span>
                     <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/icons/right.svg" class="ml-2" />
                 </div>
                 <?php endif; ?>
