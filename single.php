@@ -6,7 +6,11 @@
         
     <?php get_template_part('article', 'detail'); ?>
 
-    <?php comments_template(); ?>
+    <?php
+    if ( comments_open() ){
+      comments_template();
+    }
+    ?>
 
     <?php endwhile; endif; ?>
     
