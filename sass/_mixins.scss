@@ -29,3 +29,13 @@
       color: $color;
   }
 }
+
+@mixin category-badge-colorizer( $text, $background ) {
+    color: $text;
+    background-color: $background;
+    
+    &:hover{
+        color: $background;
+        background-color: $text;
+    }
+}

@@ -7,7 +7,7 @@
                 $marmota_categories = get_the_category(); 
                 if( isset($marmota_categories[0]) ): $marmota_category = $marmota_categories[0];
                 ?>
-                <a href="<?php echo esc_url(get_category_link($marmota_category->term_id)); ?>" class="featured-image-badge"><?php echo esc_html($marmota_category->name); ?></a>
+                <a href="<?php echo esc_url(get_category_link($marmota_category->term_id)); ?>" class="featured-image-badge <?php echo esc_attr(marmota_categories_colorizer_get_class( $marmota_category->term_id )); ?>"><?php echo esc_html($marmota_category->name); ?></a>
                 <?php endif; ?>
             </div>
         </div>
