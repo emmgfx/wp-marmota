@@ -1,6 +1,13 @@
 <?php
 
+define( 'MARMOTA_CLORIZE_CATEGORIES', boolval( get_theme_mod("colorize-categories", true) ) );
+define( 'MARMOTA_CATEGORY_COLORS', marmota_categories_colorizer_get_list() );
+
 function marmota_categories_colorizer_get_list(){
+    
+    if( !MARMOTA_CLORIZE_CATEGORIES ){
+        return array();
+    }
     
     $categories_in_db = get_terms( 'category', array(
         'orderby' => 'id', 
@@ -22,7 +29,9 @@ function marmota_categories_colorizer_get_list_position( $category_id ){
 }
 
 function marmota_categories_colorizer_get_class( $category_id ){
-    return 'colorize-position-' . marmota_categories_colorizer_get_list_position( $category_id );
+    if( get_theme_mod("colorize-categories", true) ){
+        return 'colorize-position-' . marmota_categories_colorizer_get_list_position( $category_id );
+    }else{
+        return false;
+    }
 }
-
-define('MARMOTA_CATEGORY_COLORS', marmota_categories_colorizer_get_list());
