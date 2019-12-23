@@ -135,6 +135,14 @@ article{
             @extend .img-fluid;
             @extend .rounded;
         }
+
+        a{
+          text-decoration: underline;
+
+          &:hover{
+            color: map-get($theme-colors, 'primary');
+          }
+        }
         
         pre{
             border-radius: 8px;
