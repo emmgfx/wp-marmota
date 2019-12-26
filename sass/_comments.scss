@@ -173,6 +173,10 @@ div#comments{
         line-height: 1.57;
         letter-spacing: 0.3px;
 
+        @media (prefers-color-scheme: dark) {
+          background-color: #000;
+        }
+
         h3{
             font-size: 18px;
             font-weight: 500;

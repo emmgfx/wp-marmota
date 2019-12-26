@@ -41,6 +41,11 @@ aside#above_footer-sidebar{
 body > footer{
     padding: map-get($theme-sizes, 'general-vertical-space') 0;
     background-color: #f3f3f3;
+
+    @media (prefers-color-scheme: dark) {
+      background-color: #000;
+    }
+
     
     a.footer-brand{
         font-weight: bold;

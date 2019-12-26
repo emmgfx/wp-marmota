@@ -17,6 +17,12 @@ body{
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+
+    @media (prefers-color-scheme: dark) {
+      background-color: #212121;
+      color: #bdbdbd;
+    }
+
     > main#content{
         flex: 1;
     }
@@ -65,7 +71,11 @@ body.home .bg-rectangle{
         width: 50%;
         height: 362px;
         max-height: 100vh;
-        background-color: #f3f3f3;
         border-radius: 0 0 0 8px;
+
+        @media (prefers-color-scheme: dark) {
+          background-color: #333333;
+        }
+
     }
 }
