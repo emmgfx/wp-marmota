@@ -16,7 +16,7 @@ add_action('after_setup_theme', 'marmota_supports_setup');
 
 function marmota_enqueue_style() {
   wp_enqueue_style( 'style', get_stylesheet_uri() );
-  wp_enqueue_style( 'Rubik', 'https://fonts.googleapis.com/css?family=Rubik:300,300i,400,500' );
+  wp_enqueue_style( 'Rubik', 'https://fonts.googleapis.com/css?family=Rubik:300,300i,400,500&display=swap' );
 }
 add_action( 'wp_enqueue_scripts', 'marmota_enqueue_style' );
 
