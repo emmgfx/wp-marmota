@@ -22,7 +22,7 @@ add_action( 'wp_enqueue_scripts', 'marmota_enqueue_style' );
 
 function marmota_enqueue_script() {
   wp_enqueue_script( 'jquery' );
-  wp_enqueue_script( 'bootstrap', esc_url(get_template_directory_uri()) . '/js/bootstrap-4.3.1-dist/js/bootstrap.min.js', array('jquery'), '4.3.1', true );
+  wp_enqueue_script( 'bootstrap', esc_url(get_template_directory_uri()) . '/js/bootstrap-4.4.1-dist/js/bootstrap.min.js', array('jquery'), '4.4.1', true );
   wp_enqueue_script( 'marmota', esc_url(get_template_directory_uri()) . '/js/main.js', array('jquery', 'bootstrap'), true );
 }
 add_action( 'wp_enqueue_scripts', 'marmota_enqueue_script' );
