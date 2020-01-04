@@ -11,10 +11,10 @@
     <footer>
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-4">
+                <div class="col-12 col-md-4 text-center text-md-left mb-3 mb-md-0">
                     <a class="footer-brand" href="<?php echo esc_url(get_home_url()); ?>"><?php echo get_bloginfo('name'); ?></a>
                 </div>
-                <div class="col-4 text-center">
+                <div class="col-12 col-md-4 text-center mb-4 mb-md-0">
                     <ul class="list-unstyled list-inline m-0">
                         <?php foreach( marmota_get_social_networks() as $marmota_slug => $marmota_label ): ?>
                         <?php $marmota_url = esc_url(get_theme_mod($marmota_slug)); if(empty($marmota_url)) continue; ?>
@@ -23,7 +23,7 @@
                     </ul>
                 </div>
                 <?php if(has_nav_menu('footer')): ?>
-                <div class="col-4 text-right">
+                <div class="col-12 col-md-4 text-center text-md-right">
                     <?php
                     wp_nav_menu(array(
                         'theme_location'	=> 'footer',
