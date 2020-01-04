@@ -203,8 +203,6 @@ article{
         }
         
         ul, ol{
-            font-size: 14px;
-            color: $body-color;
             font-weight: 300;
 
             @media (prefers-color-scheme: dark) {
