@@ -19,6 +19,14 @@ function marmota_has_sticky_post(){
     return isset($sticky[0]);
 }
 
+function marmota_is_posts_page(){
+  return
+    is_category() ||
+    is_tag() ||
+    is_date() ||
+    is_archive();
+}
+
 function modify_default_query( $query ) {
     
     # This function modifies the post_per_page setting, in order to
