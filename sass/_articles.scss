@@ -145,6 +145,11 @@ article{
             color: map-get($theme-colors, 'primary');
           }
         }
+
+        .has-text-color,
+        .has-background{
+          a:hover{ color: inherit; }
+        }
         
         pre{
             border-radius: 8px;
