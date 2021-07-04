@@ -151,6 +151,11 @@ article{
           a:hover{ color: inherit; }
         }
         
+        pre.wp-block-preformatted,
+        pre.wp-block-code code {
+            white-space: pre;
+        }
+
         pre{
             border-radius: 8px;
             background-color: #f3f3f3;
@@ -184,6 +189,10 @@ article{
               bottom: 0;
               margin: 21px;
               color: transparentize(#4a4a4a, .8);
+
+              @media (prefers-color-scheme: dark) {
+                  color: #074d3d;
+              }
             }
         }
         
